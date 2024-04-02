@@ -1,0 +1,1952 @@
+{
+	"info": {
+		"_postman_id": "d24b1c5c-4541-422d-bcae-51ac27be6ea0",
+		"name": "Loch - Hospital Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9128228"
+	},
+	"item": [
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "/department Get all departments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/department",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/department Get all departments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/department",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 21:08:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "914"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"doctors\": [\n            {\n                \"contact_info\": \"8888888889\",\n                \"id\": 4,\n                \"name\": \"Dr. Surendra Patil\",\n                \"specialization\": \"Orthopedic Consultant\"\n            }\n        ],\n        \"id\": 1,\n        \"name\": \"Orthopedic\",\n        \"services\": \"Amputation, Arthroscopic surgeries, Bunionectomy and hammer toe repair, Cartilage repair or resurfacing procedures, Cartilage surgery to knee, Fracture care, Joint fusion, Arthroplasty or joint replacements\"\n    },\n    {\n        \"doctors\": [],\n        \"id\": 2,\n        \"name\": \"Cardiology\",\n        \"services\": \"Echocardiogram, Arrhythmia, Cardiac catheterization, Cardiac MRI, Heart failure, Electrocardiography, Artificial cardiac pacemaker, Cardiac stress test, Ambulatory blood pressure monitoring, Aortic stenosis, Cardioverter defibrillators, Holter monitoring, Aortic surgery, Balloon valvotomy, Cardiac rehabilitation, Complex coronary angioplasty, Congenital heart disease\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/department Create a new department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Department 5\",\n    \"services\": \"Service 51, Service 52, Service 53, Service 54, Service 55, Service 56 \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/department Create a new department",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Department 1\",\n    \"services\": \"Service 11, Service 12, Service 13, Service 14, Service 15, Service 16 \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/department",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 21:45:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"doctors\": [],\n    \"id\": 3,\n    \"name\": \"Department 1\",\n    \"services\": \"Service 11, Service 12, Service 13, Service 14, Service 15, Service 16 \"\n}"
+						}
+					]
+				},
+				{
+					"name": "/department/<id> Get a specific department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/department/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/department/<id> Get a specific department",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/department/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 21:09:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "429"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"doctors\": [\n        {\n            \"contact_info\": \"8888888889\",\n            \"id\": 4,\n            \"name\": \"Dr. Surendra Patil\",\n            \"specialization\": \"Orthopedic Consultant\"\n        }\n    ],\n    \"id\": 1,\n    \"name\": \"Orthopedic\",\n    \"services\": \"Amputation, Arthroscopic surgeries, Bunionectomy and hammer toe repair, Cartilage repair or resurfacing procedures, Cartilage surgery to knee, Fracture care, Joint fusion, Arthroplasty or joint replacements\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/department/<id> Delete a specific department",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/department/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/department/<id> Delete a specific department",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/department/5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 06:57:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/department/<id> Update a specific department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"services\": \"Arrhythmia, Cardiac catheterization, Cardiac MRI, Heart failure, Electrocardiography, Artificial cardiac pacemaker, Cardiac stress test, Aortic stenosis, Cardioverter defibrillators, Holter monitoring, Aortic surgery, Balloon valvotomy, Cardiac rehabilitation, Complex coronary angioplasty, Congenital heart disease, Sports Orthopedic\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/department/<id> Update a specific department",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"services\": \"Arrhythmia, Cardiac catheterization, Cardiac MRI, Heart failure, Electrocardiography, Artificial cardiac pacemaker, Cardiac stress test, Ambulatory blood pressure monitoring, Aortic stenosis, Cardioverter defibrillators, Holter monitoring, Aortic surgery, Balloon valvotomy, Cardiac rehabilitation, Complex coronary angioplasty, Congenital heart disease\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/department/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 21:31:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "426"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"doctors\": [],\n    \"id\": 2,\n    \"name\": \"Cardiology\",\n    \"services\": \"Arrhythmia, Cardiac catheterization, Cardiac MRI, Heart failure, Electrocardiography, Artificial cardiac pacemaker, Cardiac stress test, Ambulatory blood pressure monitoring, Aortic stenosis, Cardioverter defibrillators, Holter monitoring, Aortic surgery, Balloon valvotomy, Cardiac rehabilitation, Complex coronary angioplasty, Congenital heart disease\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Doctors",
+			"item": [
+				{
+					"name": "/doctor Get all doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctor",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/doctor Get all doctors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/doctor",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 09:30:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2274"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"appointment_records\": [],\n        \"contact_info\": \"99999999999\",\n        \"department\": null,\n        \"id\": 1,\n        \"name\": \"Dr. Manoj Naik\",\n        \"specialization\": \"Cardiology\"\n    },\n    {\n        \"appointment_records\": [],\n        \"contact_info\": \"999999999999\",\n        \"department\": null,\n        \"id\": 2,\n        \"name\": \"Dr. Manisha Naik\",\n        \"specialization\": \"General Surgeon\"\n    },\n    {\n        \"appointment_records\": [],\n        \"contact_info\": \"8888888888\",\n        \"department\": null,\n        \"id\": 3,\n        \"name\": \"Dr. Prithviraj Paigude\",\n        \"specialization\": \"Orthopedic Surgeon\"\n    },\n    {\n        \"appointment_records\": [],\n        \"contact_info\": \"8888888889\",\n        \"department\": {\n            \"id\": 1,\n            \"name\": \"Orthopedic\",\n            \"services\": \"Amputation, Arthroscopic surgeries, Bunionectomy and hammer toe repair, Cartilage repair or resurfacing procedures, Cartilage surgery to knee, Fracture care, Joint fusion, Arthroplasty or joint replacements\"\n        },\n        \"id\": 4,\n        \"name\": \"Dr. Surendra Patil\",\n        \"specialization\": \"Orthopedic Consultant\"\n    },\n    {\n        \"appointment_records\": [],\n        \"contact_info\": \"8888888890\",\n        \"department\": null,\n        \"id\": 5,\n        \"name\": \"Dr. Komal Tapasvi\",\n        \"specialization\": \"Sports Orthopedics\"\n    },\n    {\n        \"appointment_records\": [\n            {\n                \"date_time\": \"2024-04-30T06:30:58.019077\",\n                \"id\": 1,\n                \"patient\": {\n                    \"age\": 28,\n                    \"contact_info\": \"8888888892\",\n                    \"gender\": \"Male\",\n                    \"id\": 2,\n                    \"name\": \"Patient 2\"\n                }\n            }\n        ],\n        \"contact_info\": \"8888888895\",\n        \"department\": {\n            \"id\": 3,\n            \"name\": \"Department 1\",\n            \"services\": \"Service 11, Service 12, Service 13, Service 14, Service 15, Service 16 \"\n        },\n        \"id\": 6,\n        \"name\": \"Doctor 1\",\n        \"specialization\": \"Specialization 1\"\n    },\n    {\n        \"appointment_records\": [],\n        \"contact_info\": \"8888888870\",\n        \"department\": null,\n        \"id\": 7,\n        \"name\": \"Doctor 2\",\n        \"specialization\": \"Specialization 2\"\n    },\n    {\n        \"appointment_records\": [],\n        \"contact_info\": \"8888888871\",\n        \"department\": {\n            \"id\": 3,\n            \"name\": \"Department 1\",\n            \"services\": \"Service 11, Service 12, Service 13, Service 14, Service 15, Service 16 \"\n        },\n        \"id\": 8,\n        \"name\": \"Doctor 3\",\n        \"specialization\": \"Specialization 3\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/doctor Create a new doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Doctor 6\",\n    \"specialization\": \"Specialization 2\",\n    \"contact_info\": \"8888888870\",\n    \"department_id\": 11\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctor",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/doctor Create a new doctor (without department assigned)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Doctor 2\",\n    \"specialization\": \"Specialization 2\",\n    \"contact_info\": \"8888888870\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/doctor",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 08:18:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"appointment_records\": [],\n    \"contact_info\": \"8888888870\",\n    \"department\": null,\n    \"id\": 7,\n    \"name\": \"Doctor 2\",\n    \"specialization\": \"Specialization 2\"\n}"
+						},
+						{
+							"name": "/doctor Create a new doctor (department assigned)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Doctor 3\",\n    \"specialization\": \"Specialization 3\",\n    \"department_id\": 3,\n    \"contact_info\": \"8888888871\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/doctor",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 08:22:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "291"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"appointment_records\": [],\n    \"contact_info\": \"8888888871\",\n    \"department\": {\n        \"id\": 3,\n        \"name\": \"Department 1\",\n        \"services\": \"Service 11, Service 12, Service 13, Service 14, Service 15, Service 16 \"\n    },\n    \"id\": 8,\n    \"name\": \"Doctor 3\",\n    \"specialization\": \"Specialization 3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/doctor/<id> Get a specific doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctor/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctor",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/doctor/<id> Get a specific doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/doctor/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 09:26:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "525"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"appointment_records\": [\n        {\n            \"date_time\": \"2024-04-30T06:30:58.019077\",\n            \"id\": 1,\n            \"patient\": {\n                \"age\": 28,\n                \"contact_info\": \"8888888892\",\n                \"gender\": \"Male\",\n                \"id\": 2,\n                \"name\": \"Patient 2\"\n            }\n        }\n    ],\n    \"contact_info\": \"8888888895\",\n    \"department\": {\n        \"id\": 3,\n        \"name\": \"Department 1\",\n        \"services\": \"Service 11, Service 12, Service 13, Service 14, Service 15, Service 16 \"\n    },\n    \"id\": 6,\n    \"name\": \"Doctor 1\",\n    \"specialization\": \"Specialization 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/doctor/<id> Delete a specific doctor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctor/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctor",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/doctor/<id> Delete a specific doctor",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/doctor/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 22:55:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Doctor deleted.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/doctor/<id> Update a specific doctor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"department_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctor/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctor",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/doctor/<id> Updae a specific doctor",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"department_id\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/doctor/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 08:40:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "392"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"appointment_records\": [\n        {\n            \"date_time\": \"2024-04-30T06:30:58.019077\",\n            \"id\": 1,\n            \"patient\": null\n        }\n    ],\n    \"contact_info\": \"8888888895\",\n    \"department\": {\n        \"id\": 3,\n        \"name\": \"Department 1\",\n        \"services\": \"Service 11, Service 12, Service 13, Service 14, Service 15, Service 16 \"\n    },\n    \"id\": 6,\n    \"name\": \"Doctor 1\",\n    \"specialization\": \"Specialization 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/doctor/<id>/availability Get doctor's availability",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctor/6/availability",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctor",
+								"6",
+								"availability"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/doctor/<id>/availability Get doctor's availability",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/doctor/6/availability",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor",
+										"6",
+										"availability"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 16:55:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"date_time\": \"2024-04-28T06:30:58.019077\",\n        \"id\": 5\n    },\n    {\n        \"date_time\": \"2024-06-29T06:30:58.019077\",\n        \"id\": 8\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/doctor/<id>/patients Get patients assigned to a specific doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctor/6/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctor",
+								"6",
+								"patients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/doctor/<id>/availability Get patients assigned to a specific doctor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/doctor/6/patients",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"doctor",
+										"6",
+										"patients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 17:35:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "639"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"date_time\": \"2024-04-29T06:30:58.019077\",\n        \"id\": 4,\n        \"patient\": {\n            \"age\": 25,\n            \"contact_info\": \"8888888891\",\n            \"gender\": \"Female\",\n            \"id\": 1,\n            \"name\": \"Patient 1\"\n        }\n    },\n    {\n        \"date_time\": \"2024-04-30T06:30:58.019077\",\n        \"id\": 1,\n        \"patient\": {\n            \"age\": 35,\n            \"contact_info\": \"8888888993\",\n            \"gender\": \"Female\",\n            \"id\": 2,\n            \"name\": \"Patient 2\"\n        }\n    },\n    {\n        \"date_time\": \"2024-06-28T06:30:58.019077\",\n        \"id\": 9,\n        \"patient\": {\n            \"age\": 75,\n            \"contact_info\": \"8888888893\",\n            \"gender\": \"Female\",\n            \"id\": 3,\n            \"name\": \"Patient 3\"\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "/patient Get all patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patient",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/patient Get all patients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/patient",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"patient"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 09:34:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "589"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"age\": 25,\n        \"appointment_records\": [],\n        \"contact_info\": \"8888888891\",\n        \"gender\": \"Female\",\n        \"id\": 1,\n        \"name\": \"Patient 1\"\n    },\n    {\n        \"age\": 28,\n        \"appointment_records\": [\n            {\n                \"date_time\": \"2024-04-30T06:30:58.019077\",\n                \"doctor\": {\n                    \"contact_info\": \"8888888895\",\n                    \"id\": 6,\n                    \"name\": \"Doctor 1\",\n                    \"specialization\": \"Specialization 1\"\n                },\n                \"id\": 1,\n                \"medical_history\": null\n            }\n        ],\n        \"contact_info\": \"8888888892\",\n        \"gender\": \"Male\",\n        \"id\": 2,\n        \"name\": \"Patient 2\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/patient Create a new patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 28,\n    \"contact_info\": \"8888888892\",\n    \"gender\": \"Male\",\n    \"name\": \"Patient 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patient",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/patient Create a new patient",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"age\": 28,\n        \"contact_info\": \"8888888892\",\n        \"gender\": \"Male\",\n        \"name\": \"Patient 2\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/patient",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"patient"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 09:25:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "920"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"age\": 28,\n    \"appointment_records\": [],\n    \"contact_info\": \"8888888892\",\n    \"gender\": \"Male\",\n    \"id\": 2,\n    \"name\": \"Patient 2\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/patient/<id> Get a specific patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patient/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patient",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/patient/<id> Get a specific patient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/patient/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 22:40:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "673"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"age\": 25,\n    \"appointment_records\": [\n        {\n            \"date_time\": \"2024-04-30T05:42:58.019077\",\n            \"doctor\": {\n                \"contact_info\": \"99999999999\",\n                \"department\": null,\n                \"id\": 2,\n                \"name\": \"Dr. Manisha Naik\",\n                \"specialization\": \"General Surgeon\"\n            },\n            \"id\": 2,\n            \"medical_history\": {\n                \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n                \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n                \"id\": 1,\n                \"medications\": \"Medications 1, Medications 2, Medications 3\"\n            }\n        }\n    ],\n    \"contact_info\": \"8888888891\",\n    \"gender\": \"Female\",\n    \"id\": 1,\n    \"name\": \"Patient 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/patient/<id> Delete a specific patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patient/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patient",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/patient/<id> Delete a specific patient",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/patient/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"patient",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 22:31:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Patient deleted.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/patient/<id> Update a specific patient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": 35,\n    \"contact_info\": \"8888888993\",\n    \"gender\": \"Female\",\n    \"name\": \"Patient 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patient/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patient",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/patient/<id> Update a specific patient",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"age\": 28,\n    \"contact_info\": \"8888888892\",\n    \"gender\": \"Male\",\n    \"name\": \"Patient 2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/patient/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"patient",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 22:40:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"age\": 28,\n    \"appointment_records\": [],\n    \"contact_info\": \"8888888892\",\n    \"gender\": \"Male\",\n    \"id\": 2,\n    \"name\": \"Patient 2\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Appointment Records",
+			"item": [
+				{
+					"name": "/appointment-record Get all appointment records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/appointment-record",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment-record"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/appointment-record Get all appointment records",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/appointment-record",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"appointment-record"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 14:28:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2757"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"date_time\": \"2024-04-30T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"8888888895\",\n            \"id\": 6,\n            \"name\": \"Doctor 1\",\n            \"specialization\": \"Specialization 1\"\n        },\n        \"id\": 1,\n        \"medical_history\": {\n            \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n            \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n            \"id\": 1,\n            \"medications\": \"Medications 1, Medications 2, Medications 3\"\n        },\n        \"patient\": {\n            \"age\": 35,\n            \"contact_info\": \"8888888993\",\n            \"gender\": \"Female\",\n            \"id\": 2,\n            \"name\": \"Patient 2\"\n        }\n    },\n    {\n        \"date_time\": \"2024-04-30T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"99999999999\",\n            \"id\": 1,\n            \"name\": \"Dr. Manoj Naik\",\n            \"specialization\": \"Cardiology\"\n        },\n        \"id\": 2,\n        \"medical_history\": {\n            \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n            \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n            \"id\": 2,\n            \"medications\": \"Medications 1, Medications 2, Medications 3\"\n        },\n        \"patient\": {\n            \"age\": 75,\n            \"contact_info\": \"8888888893\",\n            \"gender\": \"Female\",\n            \"id\": 3,\n            \"name\": \"Patient 3\"\n        }\n    },\n    {\n        \"date_time\": \"2024-04-30T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"8888888889\",\n            \"id\": 4,\n            \"name\": \"Dr. Surendra Patil\",\n            \"specialization\": \"Orthopedic Consultant\"\n        },\n        \"id\": 3,\n        \"medical_history\": {\n            \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n            \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n            \"id\": 3,\n            \"medications\": \"Medications 1, Medications 2, Medications 3\"\n        },\n        \"patient\": {\n            \"age\": 25,\n            \"contact_info\": \"8888888891\",\n            \"gender\": \"Female\",\n            \"id\": 1,\n            \"name\": \"Patient 1\"\n        }\n    },\n    {\n        \"date_time\": \"2024-04-29T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"8888888895\",\n            \"id\": 6,\n            \"name\": \"Doctor 1\",\n            \"specialization\": \"Specialization 1\"\n        },\n        \"id\": 4,\n        \"medical_history\": {\n            \"allergies\": \"Edited Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n            \"diagnoses\": \"Edited Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n            \"id\": 4,\n            \"medications\": \"Edited Medications 1, Medications 2, Medications 3\"\n        },\n        \"patient\": {\n            \"age\": 25,\n            \"contact_info\": \"8888888891\",\n            \"gender\": \"Female\",\n            \"id\": 1,\n            \"name\": \"Patient 1\"\n        }\n    },\n    {\n        \"date_time\": \"2024-04-28T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"8888888895\",\n            \"id\": 6,\n            \"name\": \"Doctor 1\",\n            \"specialization\": \"Specialization 1\"\n        },\n        \"id\": 5,\n        \"medical_history\": null,\n        \"patient\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/appointment-record Create a new appoinment record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date_time\": \"2024-06-28T06:30:58.019077+00:00\",\n    \"doctor_id\": 6,\n    \"patient_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/appointment-record",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment-record"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/appointment-record Create a new appoinment record",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date_time\": \"2024-04-30T06:30:58.019077+00:00\",\n    \"doctor_id\": 4,\n    \"patient_id\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/appointment-record",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"appointment-record"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 23:10:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "630"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date_time\": \"2024-04-30T06:30:58.019077\",\n    \"doctor\": {\n        \"contact_info\": \"8888888889\",\n        \"department\": {\n            \"id\": 1,\n            \"name\": \"Orthopedic\",\n            \"services\": \"Amputation, Arthroscopic surgeries, Bunionectomy and hammer toe repair, Cartilage repair or resurfacing procedures, Cartilage surgery to knee, Fracture care, Joint fusion, Arthroplasty or joint replacements\"\n        },\n        \"id\": 4,\n        \"name\": \"Dr. Surendra Patil\",\n        \"specialization\": \"Orthopedic Consultant\"\n    },\n    \"id\": 4,\n    \"patient\": {\n        \"age\": 28,\n        \"contact_info\": \"8888888892\",\n        \"gender\": \"Male\",\n        \"id\": 2,\n        \"name\": \"Patient 2\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/appointment-record/<id> Get a specific appointment record",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/appointment-record/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment-record",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/appointment-record/<id> Get a specific appointment record",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/appointment-record/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"appointment-record",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 14:32:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "567"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date_time\": \"2024-04-30T06:30:58.019077\",\n    \"doctor\": {\n        \"contact_info\": \"8888888895\",\n        \"id\": 6,\n        \"name\": \"Doctor 1\",\n        \"specialization\": \"Specialization 1\"\n    },\n    \"id\": 1,\n    \"medical_history\": {\n        \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n        \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n        \"id\": 1,\n        \"medications\": \"Medications 1, Medications 2, Medications 3\"\n    },\n    \"patient\": {\n        \"age\": 35,\n        \"contact_info\": \"8888888993\",\n        \"gender\": \"Female\",\n        \"id\": 2,\n        \"name\": \"Patient 2\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/appointment-record/<id> Update a specific appointment record",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"doctor_id\": 7,\n    \"patient_id\": 1,\n    \"date_time\": \"2024-03-29T06:30:58.019077\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/appointment-record/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment-record",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/appointment-record/<id> Update a specific appointment record",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"doctor_id\": 6,\n    \"patient_id\": 2,\n    \"date_time\": \"2024-04-28T06:30:58.019077\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/appointment-record/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"appointment-record",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 16:10:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "567"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date_time\": \"2024-04-28T06:30:58.019077\",\n    \"doctor\": {\n        \"contact_info\": \"8888888871\",\n        \"id\": 8,\n        \"name\": \"Doctor 3\",\n        \"specialization\": \"Specialization 3\"\n    },\n    \"id\": 3,\n    \"medical_history\": {\n        \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n        \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n        \"id\": 3,\n        \"medications\": \"Medications 1, Medications 2, Medications 3\"\n    },\n    \"patient\": {\n        \"age\": 25,\n        \"contact_info\": \"8888888891\",\n        \"gender\": \"Female\",\n        \"id\": 1,\n        \"name\": \"Patient 1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/appointment-record/<id> Delete a specific appointment record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/appointment-record/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment-record",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/appointment-record/<id> Delete a specific appointment record",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/appointment-record/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"appointment-record",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 22:29:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Appointment Record deleted.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Medical History",
+			"item": [
+				{
+					"name": "/medical-history Get all medical history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/medical-history",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medical-history"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/medical-history Get all medical history",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/medical-history",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"medical-history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 13:01:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1282"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n        \"appointment_record\": {\n            \"date_time\": \"2024-04-30T06:30:58.019077\",\n            \"doctor\": {\n                \"contact_info\": \"8888888895\",\n                \"id\": 6,\n                \"name\": \"Doctor 1\",\n                \"specialization\": \"Specialization 1\"\n            },\n            \"id\": 1,\n            \"patient\": {\n                \"age\": 35,\n                \"contact_info\": \"8888888993\",\n                \"gender\": \"Female\",\n                \"id\": 2,\n                \"name\": \"Patient 2\"\n            }\n        },\n        \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n        \"id\": 1,\n        \"medications\": \"Medications 1, Medications 2, Medications 3\"\n    },\n    {\n        \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n        \"appointment_record\": {\n            \"date_time\": \"2024-04-30T06:30:58.019077\",\n            \"doctor\": {\n                \"contact_info\": \"99999999999\",\n                \"id\": 1,\n                \"name\": \"Dr. Manoj Naik\",\n                \"specialization\": \"Cardiology\"\n            },\n            \"id\": 2,\n            \"patient\": {\n                \"age\": 25,\n                \"contact_info\": \"8888888891\",\n                \"gender\": \"Female\",\n                \"id\": 1,\n                \"name\": \"Patient 1\"\n            }\n        },\n        \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n        \"id\": 2,\n        \"medications\": \"Medications 1, Medications 2, Medications 3\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/medical-history Create a new medical history record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n    \"allergies\": \"Allergies 2, Allergies 2, Allergies 3, Allergies 4\",\n    \"medications\": \"Medications 2, Medications 2, Medications 3\",\n    \"appointment_id\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/medical-history",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medical-history"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/medical-history Create a new medical history record",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n    \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n    \"medications\": \"Medications 1, Medications 2, Medications 3\",\n    \"appointment_id\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/medical-history",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"medical-history"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 13:00:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "593"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n    \"appointment_record\": {\n        \"date_time\": \"2024-04-30T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"99999999999\",\n            \"id\": 1,\n            \"name\": \"Dr. Manoj Naik\",\n            \"specialization\": \"Cardiology\"\n        },\n        \"id\": 2,\n        \"patient\": {\n            \"age\": 25,\n            \"contact_info\": \"8888888891\",\n            \"gender\": \"Female\",\n            \"id\": 1,\n            \"name\": \"Patient 1\"\n        }\n    },\n    \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n    \"id\": 2,\n    \"medications\": \"Medications 1, Medications 2, Medications 3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/medical-history/<id> Get a specific medical history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/medical-history/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medical-history",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/medical-history/<id> Get a specific medical history",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/medical-history/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"medical-history",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 13:02:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "592"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"allergies\": \"Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n    \"appointment_record\": {\n        \"date_time\": \"2024-04-30T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"8888888895\",\n            \"id\": 6,\n            \"name\": \"Doctor 1\",\n            \"specialization\": \"Specialization 1\"\n        },\n        \"id\": 1,\n        \"patient\": {\n            \"age\": 35,\n            \"contact_info\": \"8888888993\",\n            \"gender\": \"Female\",\n            \"id\": 2,\n            \"name\": \"Patient 2\"\n        }\n    },\n    \"diagnoses\": \"Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n    \"id\": 1,\n    \"medications\": \"Medications 1, Medications 2, Medications 3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/medical-history/<id> Update a specific medical history",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"diagnoses\": \"Edited Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n    \"allergies\": \"Edited Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n    \"medications\": \"Edited Medications 1, Medications 2, Medications 3\",\n    \"appointment_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/medical-history/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medical-history",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/medical-history/<id> Get a specific medical history Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"diagnoses\": \"Edited Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n    \"allergies\": \"Edited Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n    \"medications\": \"Edited Medications 1, Medications 2, Medications 3\",\n    \"appointment_id\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/medical-history/4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"medical-history",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 14:00:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "613"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"allergies\": \"Edited Allergies 1, Allergies 2, Allergies 3, Allergies 4\",\n    \"appointment_record\": {\n        \"date_time\": \"2024-04-29T06:30:58.019077\",\n        \"doctor\": {\n            \"contact_info\": \"8888888895\",\n            \"id\": 6,\n            \"name\": \"Doctor 1\",\n            \"specialization\": \"Specialization 1\"\n        },\n        \"id\": 4,\n        \"patient\": {\n            \"age\": 25,\n            \"contact_info\": \"8888888891\",\n            \"gender\": \"Female\",\n            \"id\": 1,\n            \"name\": \"Patient 1\"\n        }\n    },\n    \"diagnoses\": \"Edited Diagnoses Diagnoses Diagnoses Diagnoses Diagnoses\",\n    \"id\": 4,\n    \"medications\": \"Edited Medications 1, Medications 2, Medications 3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/medical-history/<id> Delete a specific medical history",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/medical-history/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medical-history",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/medical-history/<id> Delete a specific medical history",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/medical-history/4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"medical-history",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.13"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 22:27:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Medical History deleted.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

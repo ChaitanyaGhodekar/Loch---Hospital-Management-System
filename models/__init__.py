@@ -1,0 +1,5 @@
+from models.appointment_record import AppointmentRecordModel
+from models.department import DepartmentModel
+from models.doctor import DoctorModel
+from models.medical_history import MedicalHistoryModel
+from models.patient import PatientModel
