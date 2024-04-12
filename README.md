@@ -47,8 +47,9 @@ FLASK_DEBUG = 1
 #DATABASE_URL = "<Connection string to your intended database>" #If not present, defaults to a sqlite file
 ```
 Note:- Uncomment and enter connection string of intended database infornt of DATABASE_URL
-       If DATABASE_URL is not specified, storage default to a local SQLite file in the instance directory
-       Attaching data popualted while testing in the instance directory (data.db) SQLite file for reference
+       If DATABASE_URL is not specified, storage defaults to a local SQLite file in the instance directory
+       Attaching data popualted while testing in the instance directory (data.db) SQLite file for reference.
+       Delete "instance" folder before running application for a freshly created SQLite database.
 
 Download Link for SQLite DB Browser - Extension for viewing SQLite datas
 ```
@@ -62,7 +63,7 @@ https://sqlitebrowser.org/dl/
 
 
 ### Underlying Assumptions in the system design
-1. Doctor can or cannot belong to a department
-2. Appointment Record must have a doctor and time associated to its
-3. Appointment Records with no patient assigned are available slots
-4. Medical History is only recorded on a Appointment
+1. Doctor can or cannot belong to a department.
+2. Appointment Record must have a doctor and time associated to it.
+3. Appointment Records with no patient assigned are available slots.
+4. Medical History is only recorded on a Appointment.
