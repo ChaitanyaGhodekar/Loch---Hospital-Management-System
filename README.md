@@ -68,7 +68,7 @@ https://sqlitebrowser.org/dl/
 3. Appointment Records with no patient assigned are available slots.
 4. Medical History is only recorded on a Appointment.
 
-####Scope for Further improvement
+#### Scope for Further improvement
 1. Soft deletion of records by adding is_active field in database for entries. This will help in presering data.
 2. Refactor schemas.py at root of directory into different resource schema file for different resources and resolve circular import issue
 3. Write model class methods like get_all, save, get_by_id, delete for increasing reusability
