@@ -49,7 +49,7 @@ FLASK_DEBUG = 1
 Note:- Uncomment and enter connection string of intended database infornt of DATABASE_URL
        If DATABASE_URL is not specified, storage defaults to a local SQLite file in the instance directory
        Attaching data popualted while testing in the instance directory (data.db) SQLite file for reference.
-       Delete "instance" folder before running application for a freshly created SQLite database.
+       Delete "instance" folder before running application to created new copy SQLite database.
 
 Download Link for SQLite DB Browser - Extension for viewing SQLite datas
 ```
@@ -67,3 +67,16 @@ https://sqlitebrowser.org/dl/
 2. Appointment Record must have a doctor and time associated to it.
 3. Appointment Records with no patient assigned are available slots.
 4. Medical History is only recorded on a Appointment.
+
+####Scope for Further improvement
+1. Soft deletion of records by adding is_active field in database for entries. This will help in presering data.
+2. Refactor schemas.py at root of directory into different resource schema file for different resources and resolve circular import issue
+3. Write model class methods like get_all, save, get_by_id, delete for increasing reusability
+4. contact_info field should be unique and enforce constraints
+5. appoint_record time should be an enum of fixed slots and should be enforced by models as well as marshmallow
+   ( Ensuring philosophy of fatty models and thin controllers)
+6. Pagination of records fetched
+7. Filtering records by kwargs passed
+
+##### Bugs
+1. Medical History - nullable false
